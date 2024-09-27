@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "parallel_accumulate.dir\\Debug\\main.obj",
+            "outputs": [
+                "C:\\Data\\dev\\parallel_accumulate\\build\\parallel_accumulate.dir\\Debug\\vc143.pdb",
+                "parallel_accumulate.dir\\Debug\\"
+            ],
+            "requires": []
+        }
+    ]
+}

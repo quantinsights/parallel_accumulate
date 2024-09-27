@@ -7,20 +7,18 @@
 #include <thread>
 #include <vector>
 
-template <typename T, typename Iterator, typename Container>
-auto sequential_fold = [](Iterator first, Iterator last, T init, T& result)
-{
-    result = std::accumulate(first, last, init);
-}
+// auto sequential_fold = []<typename T, typename Iterator, typename Container>(Iterator first, Iterator last, T init, T& result)
+// {
+//     result = std::accumulate(first, last, init);
+// };
 
-template <typename T_elem, typename T_accum, typename Iterator, typename Container>
-auto sequential_fold = [](Iterator first, Iterator last, T_accum init, std::function<T_accum(T_elem, T_accum)> func, T_accum& result)
+auto sequential_fold = []<typename T_elem, typename T_accum, typename Iterator, typename Container>(Iterator first, Iterator last, T_accum init, std::function<T_accum(T_elem, T_accum)> func, T_accum& result)
 {
     result = std::accumulate(first, last, init, func);
-}
+};
 
 template <typename T_elem, typename T_accum, typename Iterator, typename Container>
-T_accum parallel_accumulate(Iterator first, Iterator last, T init, std::function<T_accum(T_elem, T_accum)> func)
+T_accum parallel_accumulate(Iterator first, Iterator last, T_elem init, std::function<T_accum(T_elem, T_accum)> func)
 {
     unsigned long const length = std::distance(first, last);
     if (!length)
