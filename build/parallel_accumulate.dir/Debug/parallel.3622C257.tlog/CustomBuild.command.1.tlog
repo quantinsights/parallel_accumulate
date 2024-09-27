@@ -1,0 +1,10 @@
+^C:\DATA\DEV\PARALLEL_ACCUMULATE\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Data/dev/parallel_accumulate -BC:/Data/dev/parallel_accumulate/build --check-stamp-file C:/Data/dev/parallel_accumulate/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

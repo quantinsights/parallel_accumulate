@@ -48,7 +48,7 @@ T_accum parallel_accumulate(Iterator first, Iterator last, T init, std::function
     // results and a std::vector<std::thread> for the threads. 
     std::vector<T_accum> results(num_threads);
     std::vector<std::thread> threads(num_threads);
-    Iterator it = block_start;
+    Iterator it = first;
     for(int i{0};i<num_threads; ++i)
     {
         threads[i] = std::thread(sequential_fold, it, it+1, func, std::ref(results[i]));
