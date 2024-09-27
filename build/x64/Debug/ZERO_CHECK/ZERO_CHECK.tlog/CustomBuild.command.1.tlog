@@ -1,0 +1,10 @@
+^C:\DATA\DEV\PARALLEL_ACCUMULATE\BUILD\CMAKEFILES\BF263A39EAD971A972495047DD224F33\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Data/dev/parallel_accumulate -BC:/Data/dev/parallel_accumulate/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Data/dev/parallel_accumulate/build/parallel_accumulate.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
