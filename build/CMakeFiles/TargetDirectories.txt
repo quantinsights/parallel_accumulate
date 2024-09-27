@@ -1,3 +1,0 @@
-C:/Data/dev/parallel_accumulate/build/CMakeFiles/parallel_accumulate.dir
-C:/Data/dev/parallel_accumulate/build/CMakeFiles/ALL_BUILD.dir
-C:/Data/dev/parallel_accumulate/build/CMakeFiles/ZERO_CHECK.dir
