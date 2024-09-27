@@ -51,7 +51,7 @@ T_accum parallel_accumulate(Iterator first, Iterator last, T init, std::function
     Iterator it = first;
     for(int i{0};i<num_threads; ++i)
     {
-        threads[i] = std::thread(sequential_fold, it, it+1, func, std::ref(results[i]));
+        threads[i] = std::thread(sequential_fold, it, it + block_size, func, std::ref(results[i]));
         it += block_size;
     }
 
